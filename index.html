@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7f4">
+  <meta name="description" content="Damir Artykbayev — cybersecurity graduate exploring trustworthy machine learning, security automation, and the reliability of automated decisions. Research and selected projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Damir Artykbayev | Research & Engineering">
+  <meta property="og:description" content="Machine learning, cybersecurity and the question of what makes an automated result trustworthy.">
+  <meta property="og:url" content="https://dart6y.github.io/">
+  <title>Damir Artykbayev — Research & Engineering</title>
+  <link rel="canonical" href="https://dart6y.github.io/">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+    :root { --bg:#f5f7f4; --paper:#ffffff; --ink:#132724; --muted:#52615c; --line:#d8e1dc; --dark:#102a27; --soft:#eaf0ec; --accent:#b8e8c8; --bright:#d7f0dc; --blue:#557bff; --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Arial,sans-serif; color-scheme:light; }
+    * { box-sizing:border-box; }
+    html {scroll-behavior:smooth;scroll-padding-top:110px;}
+    body {margin:0;background:var(--bg);color:var(--ink);font:16px/1.62 var(--font);-webkit-font-smoothing:antialiased;}
+    ::selection {background:var(--accent);color:var(--dark);}
+    a {color:inherit;text-decoration:none;}
+    a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:4px;}
+    button{font:inherit;}
+    .skip{position:absolute;left:15px;top:-80px;padding:8px 15px;background:var(--paper);z-index:100;} .skip:focus{top:10px;}
+    .wrap{width:min(1220px,calc(100% - 80px));margin:0 auto;}
+    .header{position:sticky;top:0;z-index:50;background:rgba(245,247,244,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(18px);}
+    .header-inner{height:81px;display:flex;align-items:center;justify-content:space-between;gap:25px;}
+    .brand{display:flex;align-items:center;gap:12px;flex-shrink:0;} .brand-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:13px;color:#fafff9;background:var(--dark);font-size:12px;letter-spacing:.04em;font-weight:780;}
+    .brand-name{display:block;font-weight:740;line-height:1.18;letter-spacing:-.025em;font-size:14px;}
+    .brand-sub{display:block;color:var(--muted);font-size:11px;line-height:1.5;margin-top:2px;}
+    .nav{display:flex;align-items:center;gap:34px;} .nav a{font-weight:600;color:#455850;font-size:13px;transition:color .15s;} .nav a:hover{color:var(--ink);}
+    .header-right{display:flex;gap:15px;align-items:center;} .available{font-size:12px;font-weight:650;display:flex;align-items:center;gap:8px;white-space:nowrap;color:#2d5950;}
+    .available:before{content:"";width:7px;height:7px;background:#35b47a;border-radius:50%;box-shadow:0 0 0 4px #ddefe3;}
+    .nav-cta{padding:11px 17px;background:var(--dark);color:white;border-radius:999px;font-weight:680;font-size:12px;white-space:nowrap;transition:transform .2s,background .2s;}
+    .nav-cta:hover{transform:translateY(-2px);background:#24443d;}
+    .hero{padding:103px 0 60px;} .hero-grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(330px,.94fr);gap:70px;align-items:center;}
+    .kicker{display:inline-flex;align-items:center;gap:9px;letter-spacing:.115em;text-transform:uppercase;font-size:11px;font-weight:790;color:#35675a;}
+    .kicker:before{content:"";display:block;width:22px;height:1px;background:#447d66;}
+    h1,h2,h3,p{margin-top:0;} h1{font-size:clamp(3.4rem,5.6vw,6rem);line-height:1.055;letter-spacing:-.075em;margin:28px 0 29px;font-weight:760;}
+    h1 em{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.075em;color:#3c735e;}
+    .hero-lead{font-size:clamp(17px,1.75vw,20px);line-height:1.75;color:var(--muted);max-width:570px;margin-bottom:30px;}
+    .hero-buttons{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:35px;} .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 19px;font-weight:710;font-size:13px;transition:transform .2s,background .2s;border:1px solid transparent;min-height:49px;}
+    .btn:hover{transform:translateY(-2px);} .btn-primary{background:var(--dark);color:white;} .btn-primary:hover{background:#24443d;} .btn-light{background:var(--paper);border-color:var(--line);}
+    .arrow{font-size:18px;line-height:0;}
+    .hero-foot{margin-top:51px;display:flex;gap:28px;align-items:center;flex-wrap:wrap;font-size:12px;color:#65736b;} .hero-foot span{display:flex;align-items:center;gap:8px;} .tiny-dot{width:5px;height:5px;background:#94a79e;border-radius:50%;}
+    .graphic{position:relative;overflow:hidden;aspect-ratio:1/1.06;background:var(--dark);color:#dcefe5;border-radius:26px;isolation:isolate;box-shadow:0 22px 55px rgba(26,54,43,.09);}
+    .graphic:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 60% 42%,#306354 0,transparent 49%),repeating-linear-gradient(0deg,transparent 0px,transparent 44px,rgba(219,248,232,.045) 45px),repeating-linear-gradient(90deg,transparent 0px,transparent 44px,rgba(219,248,232,.045) 45px);}
+    .graphic-top{position:absolute;left:29px;right:29px;top:29px;display:flex;justify-content:space-between;align-items:center;color:#bbd7c9;letter-spacing:.1em;text-transform:uppercase;font-size:10px;font-weight:750;}
+    .graphic-top .state{border:1px solid #61887b;border-radius:999px;padding:8px 11px;color:#d4ebdf;letter-spacing:.04em;}
+    .graphic-art{width:92%;position:absolute;left:4%;top:15%;overflow:visible;} .graphic-art .line{stroke:#71998a;stroke-width:1.05;opacity:.36;fill:none;} .graphic-art .wave{stroke:#95d5af;stroke-width:1.2;opacity:.63;fill:none;} .graphic-art .node{fill:#d2f7d9;stroke:#16352c;stroke-width:3;} .graphic-art .ring{fill:none;stroke:#bcf0ca;stroke-opacity:.22;stroke-width:1;}
+    .graphic-art .center{fill:#d0edbf;stroke:#9ad0a6;stroke-width:4;stroke-opacity:.22;}
+    .graphic-art .pulse{transform-origin:250px 250px;animation:pulse 5s ease-in-out infinite;}
+    @keyframes pulse {0%,100%{opacity:.3;transform:scale(.92)}50%{opacity:1;transform:scale(1.08)}}
+    .graphic-base{position:absolute;left:29px;right:29px;bottom:28px;display:flex;align-items:flex-end;justify-content:space-between;border-top:1px solid #426157;padding-top:21px;}
+    .graphic-base p{color:#d8e7df;font-size:14px;line-height:1.45;margin:0;font-weight:650;max-width:210px;}
+    .graphic-base span{color:#91b2a5;font-size:10px;white-space:nowrap;letter-spacing:.08em;text-transform:uppercase;}
+    .facts{margin-top:65px;border:1px solid var(--line);background:#fff;border-radius:18px;display:grid;grid-template-columns:repeat(3,1fr);padding:28px 32px;}
+    .fact{padding:0 32px;border-right:1px solid var(--line);} .fact:first-child{padding-left:0}.fact:last-child{border-right:0;padding-right:0;}
+    .fact strong{font-size:27px;letter-spacing:-.045em;display:block;line-height:1.25;font-weight:780;} .fact span{font-size:12px;line-height:1.6;color:var(--muted);display:block;margin-top:7px;}
+    section.section{padding:115px 0 0;} .section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px;}
+    .section-heading h2{font-size:clamp(2.2rem,4vw,4.15rem);line-height:1.12;letter-spacing:-.064em;margin:18px 0 0;font-weight:750;max-width:750px;}
+    .section-heading p{max-width:325px;color:var(--muted);font-size:14px;line-height:1.8;margin:0;}
+    .research-feature{border:1px solid var(--line);border-radius:22px;padding:clamp(26px,4.5vw,64px);background:var(--paper);display:grid;grid-template-columns:1.22fr .78fr;gap:60px;position:relative;overflow:hidden;}
+    .research-feature:before{content:"";position:absolute;right:-100px;top:-155px;width:345px;height:345px;border:70px solid #eff4f0;border-radius:50%;pointer-events:none;}
+    .eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.11em;color:#527b69;font-weight:780;display:flex;align-items:center;gap:8px;}
+    .research-feature h3{margin:20px 0 20px;font-size:clamp(1.8rem,3vw,3.25rem);letter-spacing:-.06em;line-height:1.17;max-width:640px;}
+    .research-feature .desc{color:var(--muted);line-height:1.8;font-size:15px;max-width:600px;}
+    .tag-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px;} .tag{background:#eef4ef;border:1px solid #e1e9e2;color:#365e50;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:640;white-space:nowrap;}
+    .research-aside{position:relative;z-index:1;align-self:center;border-left:1px solid var(--line);padding-left:37px;}
+    .research-aside .question{font-family:Georgia,"Times New Roman",serif;font-style:italic;font-size:clamp(20px,2.2vw,27px);line-height:1.44;color:#356354;letter-spacing:-.025em;margin-bottom:23px;}
+    .research-aside .aside-note{font-size:12px;color:var(--muted);line-height:1.8;}
+    .section-label{font-size:12px;font-weight:750;letter-spacing:.06em;color:#527868;text-transform:uppercase;}
+    .project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+    .project-card{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;}
+    .project-card:hover{transform:translateY(-3px);box-shadow:0 20px 38px rgba(20,43,33,.055);}
+    .project-visual{min-height:170px;background:#e7f1e9;position:relative;overflow:hidden;padding:24px;display:flex;align-items:flex-end;justify-content:space-between;}
+    .visual-rti{background:#e2eee9;} .visual-phish{background:#e9eef7;} .visual-career{background:#eef0e7;}
+    .project-visual:before{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(33,79,65,.13);border-radius:50%;top:-100px;right:-45px;box-shadow:0 0 0 30px rgba(61,115,88,.035),0 0 0 60px rgba(61,115,88,.035);}
+    .visual-phish:before{border-radius:28px;transform:rotate(28deg);background:linear-gradient(135deg,rgba(85,123,255,.04),rgba(85,123,255,0));}
+    .visual-career:before{border-radius:50%;width:330px;height:330px;}
+    .visual-number{position:relative;z-index:2;font-size:13px;font-weight:780;letter-spacing:.08em;}
+    .visual-label{position:relative;z-index:2;color:#3e6a59;font-weight:700;font-size:11px;letter-spacing:.075em;text-transform:uppercase;}
+    .visual-phish .visual-label{color:#546995;}
+    .project-body{padding:28px 29px 30px;display:flex;flex-direction:column;flex:1;}
+    .project-body h3{font-size:23px;line-height:1.28;letter-spacing:-.045em;margin:10px 0 14px;}
+    .project-body p{color:var(--muted);font-size:14px;line-height:1.77;margin-bottom:18px;flex:1;}
+    .project-metric{display:flex;align-items:baseline;gap:10px;border-top:1px solid var(--line);padding-top:19px;margin-top:3px;}
+    .project-metric strong{font-size:25px;letter-spacing:-.05em;line-height:1.2;} .project-metric span{font-size:12px;color:var(--muted);line-height:1.5;}
+    .project-foot{font-size:11px;line-height:1.7;color:#63746a;margin:14px 0 0;}
+    .project-body .tag-list{margin-top:19px;}
+    .principles{background:var(--dark);color:#f3fff6;margin-top:120px;padding:105px 0;border-radius:0;}
+    .principles .kicker{color:#a9debe;} .principles .kicker:before{background:#8fcbaa;}
+    .principles .section-heading h2{max-width:730px;} .principles .section-heading p{color:#bdd3c5;}
+    .principle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#3b5850;border:1px solid #3b5850;border-radius:18px;overflow:hidden;margin-top:42px;}
+    .principle{padding:32px 29px;background:var(--dark);} .principle .n{color:#9ddcb4;font-size:12px;font-weight:770;} .principle h3{font-size:20px;letter-spacing:-.025em;line-height:1.35;margin:25px 0 10px;} .principle p{color:#b5cfc0;font-size:13px;line-height:1.8;margin:0;}
+    .bio-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:85px;}
+    .bio-copy{font-size:17px;line-height:1.85;color:var(--muted);}
+    .timeline{display:grid;gap:0;}
+    .event{display:grid;grid-template-columns:90px 1fr;gap:15px;border-top:1px solid var(--line);padding:19px 0;}
+    .event:last-child{border-bottom:1px solid var(--line);}
+    .event-year{font-size:12px;color:#497463;font-weight:740;letter-spacing:.03em;padding-top:4px;}
+    .event-title{font-size:15px;font-weight:730;line-height:1.5;} .event-desc{font-size:12px;color:var(--muted);margin:4px 0 0;line-height:1.7;}
+    .contact{margin-top:115px;margin-bottom:75px;background:var(--dark);color:white;border-radius:25px;padding:clamp(32px,6vw,75px);position:relative;overflow:hidden;}
+    .contact:before{content:"";position:absolute;right:-190px;top:-200px;width:530px;height:530px;border:1px solid #527366;border-radius:50%;box-shadow:0 0 0 55px rgba(207,247,213,.05),0 0 0 112px rgba(207,247,213,.025);}
+    .contact .kicker{color:#a3d7b8;} .contact h2{font-size:clamp(2.4rem,4.7vw,4.5rem);line-height:1.12;letter-spacing:-.065em;max-width:740px;margin:20px 0 18px;}
+    .contact p{color:#c3dacf;font-size:15px;line-height:1.8;max-width:600px;}
+    .contact-links{display:flex;flex-wrap:wrap;gap:11px;margin-top:32px;position:relative;z-index:2;}
+    .contact-link{padding:12px 18px;border:1px solid #63877a;border-radius:999px;color:#f8fffb;font-weight:670;font-size:13px;transition:background .2s,transform .2s;} .contact-link:hover{background:#355448;transform:translateY(-2px);}
+    .footer{border-top:1px solid var(--line);padding:25px 0 35px;font-size:12px;color:var(--muted);}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:25px;flex-wrap:wrap;}
+    .footer a{text-decoration:underline;text-underline-offset:4px;}
+    @media(max-width:1100px){.nav{gap:20px}.available{display:none}.hero-grid{gap:38px}.fact{padding-left:18px;padding-right:18px}.bio-grid{gap:45px}}
+    @media(max-width:800px){.wrap{width:min(100% - 38px,680px)}.header-inner{height:72px}.nav{display:none}.hero{padding:73px 0 35px}.hero-grid{grid-template-columns:1fr;gap:36px}.hero-lead{max-width:600px}.graphic{aspect-ratio:1.5/1}.graphic-art{width:70%;left:15%;top:0}.hero-foot{margin-top:30px}.facts{margin-top:32px;padding:22px 15px}.fact{padding:0 13px}.fact strong{font-size:23px}.fact span{font-size:11px}section.section{padding-top:82px}.section-heading{align-items:start;flex-direction:column;gap:15px}.research-feature{grid-template-columns:1fr;gap:22px}.research-aside{border-left:none;border-top:1px solid var(--line);padding:25px 0 0}.project-grid{grid-template-columns:1fr}.principles{margin-top:80px;padding:75px 0}.principle-grid{grid-template-columns:1fr}.bio-grid{grid-template-columns:1fr;gap:22px}.contact{margin-top:75px;margin-bottom:40px}}
+    @media(max-width:520px){.wrap{width:calc(100% - 34px)}.header-right .nav-cta{padding:10px 14px}.brand-sub{display:none}h1{font-size:clamp(3.05rem,11.2vw,4rem)}.graphic{aspect-ratio:1.09/1}.graphic-art{width:92%;left:4%;top:12%}.facts{grid-template-columns:1fr;gap:18px}.fact,.fact:first-child,.fact:last-child{padding:0;border:none}.fact:not(:last-child){border-bottom:1px solid var(--line);padding-bottom:16px}.fact strong{font-size:26px}.fact span{margin-top:2px}.project-body{padding:25px 23px}.event{grid-template-columns:64px 1fr}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.graphic-art .pulse{animation:none}.btn,.nav-cta,.project-card,.contact-link{transition:none}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a href="#top" class="brand" aria-label="Damir Artykbayev — home">
+        <span class="brand-mark" aria-hidden="true">DA.</span>
+        <span><span class="brand-name">Damir Artykbayev</span><span class="brand-sub">Research & engineering</span></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#research">Research</a><a href="#projects">Projects</a><a href="#approach">Approach</a><a href="#background">Background</a>
+      </nav>
+      <div class="header-right"><span class="available">Open to research collaborations</span><a class="nav-cta" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <span class="kicker">Cybersecurity × Machine Learning</span>
+            <h1 id="hero-title">Trust begins where <em>testing</em> gets difficult.</h1>
+            <p class="hero-lead">I'm Damir, a cybersecurity graduate exploring the reliability of machine learning and automated security decisions. My work brings together adversarial thinking, careful evaluation, and practical systems engineering.</p>
+            <div class="hero-buttons">
+              <a href="#research" class="btn btn-primary">Explore research <span class="arrow" aria-hidden="true">↗</span></a>
+              <a href="#projects" class="btn btn-light">Selected projects <span class="arrow" aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-foot"><span><i class="tiny-dot" aria-hidden="true"></i> BSc (Hons) · First Class Honours</span><span><i class="tiny-dot" aria-hidden="true"></i> AI security · Trustworthy ML</span></div>
+          </div>
+          <div class="graphic" role="img" aria-label="Abstract network of interconnected nodes representing measurable signals and verification">
+            <div class="graphic-top"><span>System / Signals</span><span class="state">Verification ≠ execution</span></div>
+            <svg class="graphic-art" viewBox="0 0 500 500" aria-hidden="true">
+              <circle class="ring pulse" cx="250" cy="250" r="167"/><circle class="ring" cx="250" cy="250" r="124"/><circle class="ring" cx="250" cy="250" r="75"/>
+              <g class="line"><path d="M80 138 L250 66 L414 133 L445 328 L251 429 L59 336 Z"/><path d="M80 138 L414 133 L251 429 L80 138 Z"/><path d="M250 66 L445 328 L59 336 L250 66 Z"/><path d="M414 133 L59 336"/><path d="M250 66 L251 429"/></g>
+              <g class="wave"><path d="M80 138 Q246 64 414 133"/><path d="M445 328 Q300 384 251 429"/><path d="M59 336 Q185 268 251 429"/><path d="M250 66 Q170 239 59 336"/></g>
+              <g><circle class="node" cx="80" cy="138" r="9"/><circle class="node" cx="250" cy="66" r="9"/><circle class="node" cx="414" cy="133" r="9"/><circle class="node" cx="445" cy="328" r="9"/><circle class="node" cx="251" cy="429" r="9"/><circle class="node" cx="59" cy="336" r="9"/></g>
+              <path d="M208 250 L234 277 L292 217" stroke="#143b2f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <circle class="center" cx="250" cy="250" r="48"/>
+              <circle cx="250" cy="250" r="6" fill="#142f27"/>
+            </svg>
+            <div class="graphic-base"><p>Does the result reflect what the system was meant to test?</p><span>Research question · 001</span></div>
+          </div>
+        </div>
+        <div class="facts" aria-label="Research and academic highlights">
+          <div class="fact"><strong>First Class</strong><span>BSc (Hons) · De Montfort University</span></div>
+          <div class="fact"><strong>98.88%</strong><span>Presence accuracy in controlled Wi-Fi sensing evaluation</span></div>
+          <div class="fact"><strong>3 focus areas</strong><span>ML reliability · AI security · Security automation</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="kicker">01 / Current research</span><h2 id="research-title">When a passing check isn't enough.</h2></div>
+          <p>Investigating the gap between what security requirements say and what automated checks actually verify.</p>
+        </div>
+        <article class="research-feature">
+          <div>
+            <span class="eyebrow"><span aria-hidden="true">◉</span> Independent research · ongoing</span>
+            <h3>Semantic Fidelity of Automated Security and Compliance Checks</h3>
+            <p class="desc">A security check may execute exactly as written while testing something different from the requirement it claims to verify. This research examines that semantic mismatch, the risk of false assurance, and ways to evaluate whether automated checks faithfully represent their intended controls.</p>
+            <p class="desc">The work is ongoing. Current questions include the role of machine learning in interpreting natural-language requirements, and how ML-assisted verification itself should be independently tested. No completed validator or peer-reviewed publication is claimed.</p>
+            <div class="tag-list"><span class="tag">Security assurance</span><span class="tag">GRC automation</span><span class="tag">Semantic fidelity</span><span class="tag">Trustworthy AI</span></div>
+          </div>
+          <aside class="research-aside">
+            <p class="question">“An automated security check could do precisely what its code instructed and still fail to do what the security requirement demanded.”</p>
+            <p class="aside-note">Research motivation: understand false PASS outcomes before organisations place confidence in an inaccurate automated assessment.</p>
+            <div class="tag-list"><span class="tag">Status: research in progress</span></div>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="kicker">02 / Selected work</span><h2 id="projects-title">Experiments, not just outcomes.</h2></div>
+          <p>Selected research and engineering projects, with evaluation context and limitations kept visible.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-visual visual-rti"><span class="visual-number">PROJECT / 01</span><span class="visual-label">Radio sensing + ML</span></div>
+            <div class="project-body">
+              <span class="eyebrow">Final-year research · 2026</span>
+              <h3>Camera-free indoor sensing with Wi-Fi</h3>
+              <p>Designed a controlled indoor presence and coarse-location system using six ESP32 nodes, directed RSSI links, radio tomographic imaging and Random Forest models. Tested generalisation with session-aware evaluation rather than relying on inflated random-window results.</p>
+              <div class="project-metric"><strong>98.88%</strong><span>Presence accuracy on a session-aware held-out evaluation</span></div>
+              <div class="project-foot">Localisation exact-cell accuracy: 66.30%. These figures describe a controlled 2 × 2 m, 16-cell experiment and are not general deployment claims.</div>
+              <div class="tag-list"><span class="tag">Python</span><span class="tag">ESP32 / RSSI</span><span class="tag">Random Forest</span><span class="tag">RTI</span></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual visual-phish"><span class="visual-number">PROJECT / 02</span><span class="visual-label">Adversarial evaluation</span></div>
+            <div class="project-body">
+              <span class="eyebrow">AI Security coursework</span>
+              <h3>Phishing detection beyond the test set</h3>
+              <p>Trained classical ML classifiers on website features, then challenged the initial results through leakage analysis, domain-overlap checks and modified phishing samples. The experiment helped expose the limits of near-perfect benchmark performance.</p>
+              <div class="project-metric"><strong>33.02%</strong><span>Modified phishing samples missed in an evasion experiment</span></div>
+              <div class="project-foot">The result describes a specific modified-sample test, not an expected failure rate across real-world attacks.</div>
+              <div class="tag-list"><span class="tag">Phishing ML</span><span class="tag">Robustness</span><span class="tag">Data leakage</span><span class="tag">Evaluation</span></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual visual-career"><span class="visual-number">PROJECT / 03</span><span class="visual-label">Software engineering</span></div>
+            <div class="project-body">
+              <span class="eyebrow">Independent engineering · ongoing</span>
+              <h3>Explainable ATS matching engine</h3>
+              <p>Developed a deterministic resume-to-job-description matching component with requirement extraction, evidence-gated matching and interpretable recommendations. The work prioritises verifiable candidate evidence and privacy-aware system design.</p>
+              <div class="project-metric"><strong>Evidence first</strong><span>Explainability instead of unsupported scoring claims</span></div>
+              <div class="project-foot">Selected ATS engine functionality is implemented; broader job-search automation remains separate ongoing work.</div>
+              <div class="tag-list"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Privacy</span><span class="tag">Automation</span></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-visual"><span class="visual-number">RESEARCH / NEXT</span><span class="visual-label">Research direction</span></div>
+            <div class="project-body">
+              <span class="eyebrow">Proposed future work</span>
+              <h3>Testing the trustworthiness of ML-driven checks</h3>
+              <p>Interested in studying when language models misinterpret security requirements, how such errors propagate into automated assessments, and how adversarial evaluation can reveal weaknesses before outputs are treated as reliable.</p>
+              <div class="project-metric"><strong>Open questions</strong><span>Prospective MSc research direction — not a completed project</span></div>
+              <div class="project-foot">A research interest, not a claimed result or publication.</div>
+              <div class="tag-list"><span class="tag">LLM evaluation</span><span class="tag">Adversarial testing</span><span class="tag">Security automation</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="principles" id="approach" aria-labelledby="approach-title">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><span class="kicker">03 / Working principles</span><h2 id="approach-title">How I think about reliable systems.</h2></div>
+          <p>Research becomes useful when we question assumptions, measure failure and make limitations explicit.</p>
+        </div>
+        <div class="principle-grid">
+          <div class="principle"><span class="n">01 / TEST THE TEST</span><h3>Check what a result actually means.</h3><p>A successful execution is not necessarily evidence that the intended requirement was verified.</p></div>
+          <div class="principle"><span class="n">02 / EVALUATE HONESTLY</span><h3>Look beyond impressive metrics.</h3><p>Data leakage, shifts and adversarial inputs can reveal weaknesses that a convenient split obscures.</p></div>
+          <div class="principle"><span class="n">03 / SHOW YOUR LIMITS</span><h3>Make conclusions reproducible.</h3><p>Describe the scope of the experiment, separate measured results from hypotheses and document uncertainty.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="background" aria-labelledby="background-title">
+      <div class="wrap bio-grid">
+        <div>
+          <span class="kicker">04 / About</span>
+          <div class="section-heading" style="margin-top:0"><h2 id="background-title">Cybersecurity roots. Machine learning questions.</h2></div>
+          <p class="bio-copy">I graduated with First Class Honours in Cyber Security from De Montfort University. My interests developed through security engineering, machine learning coursework and experiments with real-world signals.</p>
+          <p class="bio-copy">I now focus on problems at the intersection of security and trustworthy automation: how systems fail, what evidence supports a claim, and how we can test models before we depend on them.</p>
+          <p class="bio-copy">I am interested in research collaboration and postgraduate work in trustworthy machine learning, AI security and security assurance.</p>
+        </div>
+        <div class="timeline" aria-label="Selected academic and professional milestones">
+          <div class="event"><span class="event-year">2026</span><div><div class="event-title">BSc (Hons) Cyber Security · First Class Honours</div><p class="event-desc">De Montfort University · Final-year research on Wi-Fi radio tomography and ML-based presence estimation.</p></div></div>
+          <div class="event"><span class="event-year">2026</span><div><div class="event-title">CompTIA Security+</div><p class="event-desc">Cybersecurity foundation covering threats, architecture, operations and risk.</p></div></div>
+          <div class="event"><span class="event-year">2025</span><div><div class="event-title">Microsoft Certified: Security Operations Analyst Associate (SC-200)</div><p class="event-desc">Security operations, threat investigation and incident response.</p></div></div>
+          <div class="event"><span class="event-year">2024</span><div><div class="event-title">Huawei Seeds for the Future · Top 6 of 30 teams</div><p class="event-desc">Team-based technology and innovation programme.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap contact" id="contact" aria-labelledby="contact-title">
+      <span class="kicker">05 / Connect</span>
+      <h2 id="contact-title">Interested in making AI systems more trustworthy?</h2>
+      <p>I'm open to conversations about postgraduate research, model evaluation, AI security and collaboration on security-focused machine learning systems.</p>
+      <div class="contact-links">
+        <a class="contact-link" href="https://www.linkedin.com/in/damir-artykbayev-a99159263/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a class="contact-link" href="https://github.com/Dart6y" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a class="contact-link" href="https://huggingface.co/Dart66y" target="_blank" rel="noopener noreferrer">Hugging Face ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-inner"><span>© <span id="year">2026</span> Damir Artykbayev. Research portfolio.</span><span>Built for clarity, evidence and curiosity. · <a href="#top">Back to top ↑</a></span></div></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
